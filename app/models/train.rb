@@ -12,6 +12,6 @@ class Train < ApplicationRecord
 
   def available_seats
     ["1A","1B","1C","1D","1F"]
-    return SEATs - self.reservations.pluck(:seat_number)
+    return SEATS - self.reservations.pluck(:seat_number)
   end
 end
