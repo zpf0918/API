@@ -10,4 +10,6 @@ Rails.application.routes.draw do
       delete "reservations/:booking_code" => "reservations#destroy", as: :cancel_reservation
     end
   end
+  resources :welcome
+  root "welcome#index"
 end
