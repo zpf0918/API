@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-
+  mount_uploader :avatar, AvatarUploader
+  
   before_create :generate_authentication_token
 
   def generate_authentication_token
